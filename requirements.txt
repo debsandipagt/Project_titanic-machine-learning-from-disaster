@@ -1,0 +1,16 @@
+numpy
+pandas
+scikit-learn
+tensorflow
+matplotlib
+seaborn
+jupyterlab
+flask
+fastapi
+sqlalchemy
+pytest
+black
+pylint
+jupyter
+jsonify
+
