@@ -19,6 +19,6 @@
     ```
     pip install -r requirements.txt
     ```
-### Config git account
+### Config git account so that we can push work to repository
 1. git config --global user.name "Sandip Deb"
 2. git config --global user.email "debsandip.agt"
