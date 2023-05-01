@@ -1,7 +1,7 @@
-import pickle
 from flask import Flask, request, jsonify, app, url_for, render_template
 import numpy as np
 import pandas as pd
+import pickle
 
 app = Flask(__name__)
 
@@ -14,14 +14,15 @@ def home():
 
 @app.route('/predict_api', methods = ['POST'])
 def predict_api():
-    data = request.json('data')
+    data = request.json['data']
     print(data)
-    print(np.array(list(data.values())).reshape(-1,1))
-    new_data = scaler.transforn(np.array(list(data.values)).reshape(-1,1))
+    print(np.array(list(data.values())).reshape(1,-1))
+    new_data = scaler.transform(np.array(list(data.values())).reshape(1,-1))
     output = svmmodel.predict(new_data)
-    print(output[0])
-    return jsonify(output[0])
+    print(output)
+    return jsonify(output.tolist())
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port='8080', debug=True)
+    app.run(debug=True)
+
     

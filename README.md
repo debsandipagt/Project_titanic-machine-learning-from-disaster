@@ -22,3 +22,9 @@
 ### Config git account so that we can push work to repository
 1. git config --global user.name "Sandip Deb"
 2. git config --global user.email "debsandip.agt"
+
+### Creat app.py file for Flusk configuration
+### create another file called home.html file inside templates folder to rander that particular file
+### [getBootStrep](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and copy templete file in home.html
+
+### Work with app.py file to create html home page and & predict_api using Flask
