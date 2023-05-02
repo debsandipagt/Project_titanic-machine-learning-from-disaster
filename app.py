@@ -20,7 +20,11 @@ def predict_api():
     new_data = scaler.transform(np.array(list(data.values())).reshape(1,-1))
     output = svmmodel.predict(new_data)
     print(output)
-    return jsonify(output.tolist())
+    if output == 0:
+        result = 'Passenger died'
+    else:
+        result = 'Passenger is alive'
+    return jsonify(result)
 
 if __name__ == "__main__":
     app.run(debug=True)
