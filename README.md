@@ -28,3 +28,6 @@
 ### [getBootStrep](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and copy templete file in home.html
 
 ### Work with app.py file to create html home page and & predict_api using Flask
+### Working with postman API 
+1. [Download pastman to use postman api ](https://www.postman.com/downloads/)
+2.  Run app.py file and then open url in postman and provide relevent features as json format and then tested result and getting no error. 
