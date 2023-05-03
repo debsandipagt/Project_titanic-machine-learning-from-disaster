@@ -26,6 +26,17 @@ def predict_api():
         result = 'Passenger is alive'
     return jsonify(result)
 
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = [x if x != '' else '0' for x in request.form.values()]
+    final_input = scaler.transform(np.array(data).reshape(1, -1))
+    print(final_input)
+    output = svmmodel.predict(final_input)
+    return render_template('home.html', prediction_text='The Predicted outcome is {}'.format(output))
+
+
+    
+
 if __name__ == "__main__":
     app.run(debug=True)
 
