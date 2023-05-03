@@ -32,7 +32,11 @@ def predict():
     final_input = scaler.transform(np.array(data).reshape(1, -1))
     print(final_input)
     output = svmmodel.predict(final_input)
-    return render_template('home.html', prediction_text='The Predicted outcome is {}'.format(output))
+    if output == 0:
+        prediction_text = "died"
+    else:
+        prediction_text = "survived"
+    return render_template('home.html', prediction_text='The Predicted outcome is {}'.format(prediction_text))
 
 
     

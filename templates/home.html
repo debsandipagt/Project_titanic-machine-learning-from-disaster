@@ -15,8 +15,8 @@
 		<br>
 		<label for="Sex"> Sex: </label>
 		<select name="Sex" id="Sex">
-			<option value="0">Male</option>
-			<option value="1">Female</option>
+			<option value="1">Male</option>
+			<option value="0">Female</option>
 		</select>
 		<br>
 		<label for="Age"> Age: </label>
@@ -40,9 +40,17 @@
 		<br>
 		<input type="submit" value="Predict">
 	</form>
-	{% if prediction_text %}
-	<p> The Predicted outcome is {{ prediction_text }} </p>
-	{% endif %}
+  
+	{% if prediction_text is not none %}
+  {% if prediction_text == 0 %}
+    <p> The predicted outcome is "died". </p>
+  {% elif prediction_text == 1 %}
+    <p> The predicted outcome is "survived". </p>
+  {% else %}
+    <p> The predicted outcome is "{{ prediction_text }}". </p>
+  {% endif %}
+{% endif %}
+
 </body>
 </html>
 
