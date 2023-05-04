@@ -37,10 +37,7 @@ def predict():
     else:
         prediction_text = "survived"
     return render_template('home.html', prediction_text='The Predicted outcome is {}'.format(prediction_text))
-
-
     
-
 if __name__ == "__main__":
     app.run(debug=True)
 

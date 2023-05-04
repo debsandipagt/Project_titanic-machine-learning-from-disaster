@@ -13,4 +13,4 @@ black
 pylint
 jupyter
 jsonify
-
+gunicorn
