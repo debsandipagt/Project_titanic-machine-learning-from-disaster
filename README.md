@@ -8,6 +8,8 @@
 4. [GIT CLI](https://git-scm.com/downloads)
 
 ### Create new environment for this project
+### using Python 3.11.3 for this project
+
 1.  ```
     python -m venv env
     ```
