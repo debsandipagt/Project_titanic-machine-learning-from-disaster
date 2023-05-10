@@ -31,5 +31,17 @@
 
 ### Work with app.py file to create html home page and & predict_api using Flask
 ### Working with postman API 
-1. [Download pastman to use postman api ](https://www.postman.com/downloads/)
+1. [Download postman to use postman api ](https://www.postman.com/downloads/)
 2.  Run app.py file and then open url in postman and provide relevent features as json format and then tested result and getting no error. 
+
+### Create predict route to run the model in local server
+1. After running successfully model in local server proced for next.
+
+### Now we have to deploy the model IN cloud like AWS:
+1. Create account in AWS and then Create EC2 instence and add required OS and security group.
+2. Create Passkey and kept it safe for communication
+3. Download WinSCP to upload model in our server.
+4. Download Putty to communicate with server.
+5. Check if python is installed on server and then install requirements.txt file
+6. After testing the application and if it is working we have stopped and terminate the instences.
+7. End
